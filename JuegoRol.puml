@@ -1,0 +1,25 @@
+@startuml
+class Personaje {
+    - String nombre
+    + Personaje(String nombre)
+    + void atacar(String enemigo)
+    + void atacar(String enemigo, int distancia)
+    + void habilidadEspecial()
+}
+
+class Guerrero {
+    + Guerrero(String nombre)
+    + void habilidadEspecial()
+}
+
+class Mago {
+    + Mago(String nombre)
+    + void habilidadEspecial()
+}
+
+class JuegoRol {
+    + static void main(String[] args)
+}
+
+Personaje <|-- Guerrero
+Personaje <|-- Mago
